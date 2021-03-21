@@ -1,25 +1,23 @@
-function sumFibonnaci(num) {
-    if (num ==1){
-        return 1;
-      }
-    
-    var prevNumber = 0;
-    var currNumber = 1;
-    var result = 0;
-    while (currNumber <= num) {
-      if (currNumber % 2 !== 0) {
-        result += currNumber;
-      }
-      currNumber += prevNumber;
-      prevNumber = currNumber - prevNumber;
-    }
-  
-    return result;
+function sumFibonacci(num) {
+  if (num == 1) {
+    return 1;
   }
+  var br1 = 0;
+  var br2 = 1;
+  var zbir = 0;
+  while (br2 <= num) {
+    if (br2 % 2 !== 0) {
+      zbir += br2;
+    }
+    br2 += br1;
+    br1 = br2 - br1;
+  }
+  return zbir;
+}
 
-  console.log(sumFibonnaci(1));
-  console.log(sumFibonnaci(10));
-  console.log(sumFibonnaci(20));
-  console.log(sumFibonnaci(4));
-  console.log(sumFibonnaci(-5));
-  module.exports = sumFibonnaci;
+console.log(sumFibonacci(1));
+console.log(sumFibonacci(10));
+console.log(sumFibonacci(20));
+console.log(sumFibonacci(4));
+console.log(sumFibonacci(-5));
+module.exports = sumFibonacci;
